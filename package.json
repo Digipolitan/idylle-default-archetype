@@ -18,10 +18,7 @@
   },
   "homepage": "https://github.com/julien-sarazin/idylle-default-archetype#readme",
   "dependencies": {
-    "bluebird": "latest",
-    "idylle": "^2.0.0",
-    "lodash": "latest",
-    "mongoose": "latest",
-    "mongoose-timestamps": "0.0.1"
+    "body-parser": "^1.17.2",
+    "idylle": "^2.0.0"
   }
 }
