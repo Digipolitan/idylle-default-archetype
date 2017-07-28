@@ -19,6 +19,7 @@
   "homepage": "https://github.com/julien-sarazin/idylle-default-archetype#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "idylle": "^2.0.0"
+    "idylle": "^2.0.0",
+    "lodash": "latest"
   }
 }
