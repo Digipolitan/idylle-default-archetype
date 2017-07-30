@@ -17,7 +17,7 @@ module.exports = app => {
         },
         rules: [
             context => (context.HTTP.request.query && context.HTTP.request.query.name)
-                ? (context.query.name.length > 3)
+                ? (context.HTTP.query.name.length > 3)
                     ? Promise.resolve()
                     : context.error(400, 'name too short')
                 : Promise.resolve()
@@ -28,3 +28,8 @@ module.exports = app => {
         }
     });
 };
+
+// Try
+// http://localhost:8080/hello                  => 200 with 'hello, world'
+// http://localhost:8080/hello?name=your_name   => 200 with 'hello, your_name'
+// http://localhost:8080/hello?name=inv         => 400 with 'name too short'
