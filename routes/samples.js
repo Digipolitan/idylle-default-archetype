@@ -10,5 +10,5 @@ module.exports = app => {
         app.actions.sample.expose() // As mentioned before, you can expose an action to make it compatible with an express middleware.
     );
 
-    app.server.use('hello', router);
+    app.server.use('/hello', router);
 };
