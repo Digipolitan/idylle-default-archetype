@@ -16,7 +16,7 @@ module.exports = app => {
             set: ['hello'],
         },
         rules: [
-            context => (context.query && context.query.name)
+            context => (context.HTTP.request.query && context.HTTP.request.query.name)
                 ? (context.query.name.length > 3)
                     ? Promise.resolve()
                     : context.error(400, 'name too short')
@@ -24,7 +24,7 @@ module.exports = app => {
         ],
         execute: context => {
             console.log('action called!');
-            return Promise.resolve(`Hello, ${context.query && context.query.name || 'world'}`)
+            return Promise.resolve(`Hello, ${context.HTTP.request.query && context.HTTP.request.query.name || 'world'}`)
         }
     });
 };
