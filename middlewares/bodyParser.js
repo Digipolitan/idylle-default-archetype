@@ -1,3 +1,1 @@
-module.exports = app => {
-    return require('body-parser');
-};
+module.exports = app => require('body-parser');
