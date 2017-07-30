@@ -17,7 +17,7 @@ module.exports = app => {
         },
         rules: [
             context => (context.HTTP.request.query && context.HTTP.request.query.name)
-                ? (context.HTTP.query.name.length > 3)
+                ? (context.HTTP.request.query.name.length > 3)
                     ? Promise.resolve()
                     : context.error(400, 'name too short')
                 : Promise.resolve()
