@@ -24,7 +24,7 @@ module.exports = app => {
         ],
         execute: context => {
             console.log('action called!');
-            return Promise.resolve(`Hello, ${context.query.name || 'world'}`)
+            return Promise.resolve(`Hello, ${context.query && context.query.name || 'world'}`)
         }
     });
 };
