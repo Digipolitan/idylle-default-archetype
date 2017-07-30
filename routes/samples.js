@@ -4,4 +4,6 @@ module.exports = app => {
     router.get('/',
         app.actions.sample.expose()
     );
+
+    app.server.use(router);
 };
